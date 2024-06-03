@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import AddCandidets from './AddCandidets';
 import Orientation from './Orientation';
 import HrDashbord from './HrDashbord';
+import EmpDashboard from './EmpDashboard';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -16,8 +17,9 @@ root.render(
        <Routes>
      
         {/* <Route path='/' element={<AddCandidets/>}/> */}
-        <Route path='/' element={<HrDashbord/>}/>
+        {/* <Route path='/' element={<HrDashbord/>}/> */}
         <Route path='/Orientation' element={<Orientation/>}/>
+        <Route path='/' element={<EmpDashboard/>}/>
         
         
 
