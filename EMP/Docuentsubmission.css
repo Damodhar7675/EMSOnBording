@@ -1,0 +1,31 @@
+.docsubmit-cont{
+    margin: 300px;
+    margin-top: 10px;
+    margin-left: 400px;
+}
+
+.docsubmit-cont td input{
+    margin-left: 200px;
+}
+/* Documentsubmission.css */
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  .table th,
+  .table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .table th {
+    background-color: #f2f2f2;
+  }
+
+  .btn-cont{
+    margin-left: 800px;
+  }
+  

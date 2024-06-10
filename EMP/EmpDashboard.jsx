@@ -2,26 +2,18 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
-  Navbar,
-  Nav,
-  Container,
-  ListGroup,
-  ListGroupItem,
-  Collapse,
-  Button,
-  Row,
-  Col,
-  Card,
+  Navbar,  Nav,  Container,  ListGroup,  ListGroupItem,  Collapse,  Button,  Row,  Col,  Card,
 } from 'react-bootstrap';
 import { Typography } from '@mui/material';
+import './EmpDashboard.css'
 
 const EmpDashboard = () => {
   const [currentTime, setCurrentTime] = useState(new Date());
-  const [openTrainings, setOpenTrainings] = useState(false);
+  // const [openTrainings, setOpenTrainings] = useState(false);
   const [openForms, setOpenForms] = useState(false);
   const [openStatus, setOpenStatus] = useState(false);
 
-  const toggleTrainings = () => setOpenTrainings(!openTrainings);
+  // const toggleTrainings = () => setOpenTrainings(!openTrainings);
   const toggleForms = () => setOpenForms(!openForms);
   const toggleStatus = () => setOpenStatus(!openStatus);
 
@@ -51,7 +43,7 @@ const EmpDashboard = () => {
         </Container>
       </Navbar>
 
-      <div className="sidebar" style={{ width: '240px', paddingTop: '60px', backgroundColor: '#343a40', color: 'white' }}>
+      <div className="sidebar" style={{ width: '240px', paddingTop: '75px', backgroundColor: '#343a40', color: 'white' }}>
         <ListGroup>
           <ListGroupItem style={{ backgroundColor: '#343a40', borderColor: '#343a40' }}>
             <img
@@ -77,6 +69,10 @@ const EmpDashboard = () => {
               Home
             </Link>
           </ListGroupItem>
+          <ListGroupItem action style={{ backgroundColor: '#495057', borderColor: '#495057'  }}><Link to="/NewEmployee" className='dd_Hr_sidlist' >
+                {'New Employee'}
+                </Link>
+          </ListGroupItem>
           {/* <Typography variant='h5' sx={{ backgroundColor: "yellow", padding: '0.5rem' }}>Trainings</Typography>
           <ListGroupItem action onClick={toggleTrainings} style={{ backgroundColor: '#495057', borderColor: '#495057' }}>
             Skill
@@ -87,26 +83,31 @@ const EmpDashboard = () => {
               <ListGroupItem action style={{ backgroundColor: '#6c757d', borderColor: '#6c757d' }}>Topic</ListGroupItem>
             </ListGroup>
           </Collapse> */}
-          <Typography variant='h5' sx={{ backgroundColor: "yellow", padding: '0.5rem' }}>Forms</Typography>
-          <ListGroupItem action onClick={toggleForms} style={{ backgroundColor: '#495057', borderColor: '#495057' }}>
+ 
+          <Typography variant='h5' sx={{ backgroundColor: "rgb(162, 162, 241)", padding: '0.5rem' }}>Forms</Typography>
+          <ListGroupItem action onClick={toggleForms} style={{ backgroundColor: '#495057', borderColor: '#495057',color:"white" }}>
             Requests
           </ListGroupItem>
           <Collapse in={openForms}>
-            <ListGroup>
-              <ListGroupItem action style={{ backgroundColor: '#6c757d', borderColor: '#6c757d' }}>Leave</ListGroupItem>
-              <ListGroupItem action style={{ backgroundColor: '#6c757d', borderColor: '#6c757d' }}>Resignation</ListGroupItem>
-              <ListGroupItem action style={{ backgroundColor: '#6c757d', borderColor: '#6c757d' }}>Training</ListGroupItem>
+            <ListGroup sx={{backgroundColor: "white"}}>
+              <ListGroupItem action style={{ backgroundColor: 'white', borderColor: '#6c757d' }}>Leave</ListGroupItem>
+              <ListGroupItem action style={{ backgroundColor: 'white', borderColor: '#6c757d' }}><Link to="/Resign" className='dd_Hr_sidlist1' >
+                {'Resignation'}
+                </Link></ListGroupItem>
+              <ListGroupItem action style={{ backgroundColor: 'white', borderColor: '#6c757d' }}>Training</ListGroupItem>
             </ListGroup>
           </Collapse>
-          <Typography variant='h5' sx={{ backgroundColor: "yellow", padding: '0.5rem' }}>Status</Typography>
-          <ListGroupItem action onClick={toggleStatus} style={{ backgroundColor: '#495057', borderColor: '#495057' }}>
+          <Typography variant='h5' sx={{ backgroundColor: "rgb(162, 162, 241)", padding: '0.5rem' }}>Status</Typography>
+          <ListGroupItem action onClick={toggleStatus} style={{ backgroundColor: '#495057', borderColor: '#495057', color:"white" }}>
             Requests
           </ListGroupItem>
           <Collapse in={openStatus}>
             <ListGroup>
-              <ListGroupItem action style={{ backgroundColor: '#6c757d', borderColor: '#6c757d' }}>Leave</ListGroupItem>
-              <ListGroupItem action style={{ backgroundColor: '#6c757d', borderColor: '#6c757d' }}>Resignation</ListGroupItem>
-              <ListGroupItem action style={{ backgroundColor: '#6c757d', borderColor: '#6c757d' }}>Training</ListGroupItem>
+              <ListGroupItem action style={{ backgroundColor: 'white', borderColor: '#6c757d' }}>Leave</ListGroupItem>
+                <ListGroupItem action style={{ backgroundColor: 'white', borderColor: '#6c757d' }}><Link to="/Resign" className='dd_Hr_sidlist1' >
+                {'Resignation'}
+                </Link></ListGroupItem> 
+              <ListGroupItem action style={{ backgroundColor: 'white', borderColor: '#6c757d' }}>Training</ListGroupItem>
             </ListGroup>
           </Collapse>
         </ListGroup>
@@ -131,11 +132,6 @@ const EmpDashboard = () => {
     </div>
   );
 };
+export default EmpDashboard;
 
-const App = () => (
-  <div>
-    <EmpDashboard />
-  </div>
-);
 
-export default App;

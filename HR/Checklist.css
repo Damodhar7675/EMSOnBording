@@ -1,0 +1,78 @@
+body1 {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #e0f7fa;
+  }
+  
+  .HRApprove_fullscreen {
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .HRApprove_header {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .HRApprove_description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .HRApprove_centeredContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .HRApprove_item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .HRApprove_item input[type="checkbox"] {
+    margin-right: 0px;
+    margin-left: -130px;
+  }
+  
+  .HRApprove_itemLabel {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .HRApprove_text {
+    font-size: 16px;
+  }
+  
+  .HRApprove_itemDepartment {
+    margin-left: auto;
+    font-style: italic;
+  }
+  
+  .HRApprove_submit {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  .HRApprove_submit button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+   

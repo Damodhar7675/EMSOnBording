@@ -1,0 +1,36 @@
+.nav-bar{
+    padding-left: 200px;
+    padding-right: 200px;
+    padding-top: 10px;
+    background-color: lightgrey;
+    height: 50px;
+}
+.basicinfo-form-container{
+    border: 1px solid;
+    padding: 100px;
+    margin: 50px;
+    background-color: lightskyblue;
+    box-shadow: 5px 5px 5px 5px #888888;
+    border: none;
+    border-radius: 16px;
+}
+
+.experience{
+    padding: 10px;
+}
+
+.basicinfo-form-container input{
+    width: 350px;
+    height: 40px;
+    border-radius: 8px;
+    border: none;
+}
+
+.basicinfo-form-container textarea{
+    border-radius: 8px;
+}
+
+.basicinfo-img{
+    margin-left: 200px;
+    
+}

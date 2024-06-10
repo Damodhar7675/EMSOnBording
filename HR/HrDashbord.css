@@ -1,0 +1,17 @@
+.dd_navHav :hover{
+    
+    /* background-color: blue; */
+    color: aliceblue;
+   
+}
+.dd-imgnav{
+    background-color: aliceblue;
+}
+.dd_Hr_sidlist{
+    color: aliceblue;
+    text-decoration: none;
+}
+.dd_Hr_sidlist1{
+    color: rgb(13, 13, 13);
+    text-decoration: none;
+}
